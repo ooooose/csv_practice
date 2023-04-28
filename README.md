@@ -12,7 +12,7 @@
 - Docker, docker-compose
 
 ## ER図
-後日添付
+[![Image from Gyazo](https://i.gyazo.com/551bec2cb8c599e48ae1c36fcc9af083.png)](https://gyazo.com/551bec2cb8c599e48ae1c36fcc9af083)
 
 ## 画面遷移図
 後日添付
