@@ -24,7 +24,7 @@ services:
       dockerfile: ./docker/db/Dockerfile
     ports:
       - 3306:3306
-    environments:
+    environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: database
       MYSQL_USER: db-user
@@ -32,5 +32,5 @@ services:
       TZ: 'Asia/Tokyo'
     volumes:
       - mysql-volume:/var/lib/mysql
-  volumes:
-    mysql-volume:
+volumes:
+  mysql-volume:
