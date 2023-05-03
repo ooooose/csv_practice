@@ -25,6 +25,7 @@ Route::prefix('contacts')
         Route::get('/{id}', 'show')->name('show');
         Route::post('/{id}', 'update')->name('update');
         Route::get('/{id}/edit', 'edit')->name('edit');
+        Route::post('/{id}/destroy', 'destroy')->name('destroy');
 });
 
 Route::get('/', function () {
