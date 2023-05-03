@@ -4,6 +4,7 @@
 - 認証機能（breezeを使用）
 - ContactFormのCRUD機能
 - modelの情報をCSV入出力できる機能
+- Repository層とService層の分離
 
 ## 使用技術
 - PHP8
@@ -16,5 +17,6 @@
 ```
 CRUD機能：4/29 - 5/3
 CSV入出力機能： 5/4 - 5/6
-完成： 5/7
+リファクタ: 5/7 - 5/8
+完成： 5/9
 ```
