@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactFormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::prefix('contacts')
+    ->middleware(['auth'])
+    ->controller(ContactFormController::class)
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/', 'store')->name('store');
+        Route::get('/{id}', 'show')->name('show');
+        Route::post('/{id}', 'update')->name('update');
+        Route::get('/{id}/edit', 'edit')->name('edit');
+        Route::post('/{id}/destroy', 'destroy')->name('destroy');
+});
 
 Route::get('/', function () {
     return view('welcome');
