@@ -77,6 +77,9 @@
                                       <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">編集する</button>
                                     </div>
                                 </form>
+                                <div class="p-2">
+                                   <a href="{{ route('index') }}" class="flex mx-auto text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg">一覧に戻る</a>
+                                </div>
                                 <form id='delete_{{ $contact->id }}' method='post' action="{{ route('destroy', ['id' => $contact->id]) }}">
                                     @csrf
                                     <div class="p-2">

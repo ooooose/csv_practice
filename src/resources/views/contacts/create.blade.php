@@ -80,7 +80,8 @@
                                     <input type="checkbox" id="caution" name="caution" >注意事項に同意する
                                 </div>
                                 </div>
-                                <div class="p-2 w-full">
+                                <div class="p-2 w-full flex">
+                                <a href='{{ route('index') }}' class="flex mx-auto text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg">一覧へ戻る</a>
                                 <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">新規登録する</button>
                                 </div>
                             </div>
