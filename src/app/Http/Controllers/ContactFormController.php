@@ -115,4 +115,5 @@ class ContactFormController extends Controller
         
         return to_route('index');
     }
+
 }

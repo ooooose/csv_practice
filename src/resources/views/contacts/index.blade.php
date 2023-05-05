@@ -11,6 +11,11 @@
                 <div class="p-6 text-gray-900">
                     index!!!<br />
                     <a href="{{ route('create') }}" class="text-blue-500">新規作成</a>    
+                    <form method='get' action="{{ route('csvDownload') }}">
+                        <div class="p-2 w-full">
+                            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">一覧をCSV出力する</button>
+                        </div>
+                    </form>
                     <div class="lg:w-2/3 w-full mx-auto overflow-auto">
                         <table class="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
@@ -24,13 +29,13 @@
                             </thead>
                             <tbody>
                             @foreach($contacts as $contact)
-                              <tr>
-                                  <td class="border-gray-200 px-4 py-3">{{ $contact->id }}</td>
-                                  <td class="border-gray-200 px-4 py-3">{{ $contact->name }}</td>
-                                  <td class="border-gray-200 px-4 py-3">{{ $contact->title }}</td>
-                                  <td class="border-gray-200 px-4 py-3 text-lg text-gray-900">{{ $contact->created_at }}</td>
-                                  <td class="border-gray-200 px-4 py-3 text-lg text-gray-900"><a class="text-blue-500" href="{{ route('show', ['id' => $contact->id]) }}">詳細をみる</a></td>
-                              </tr>
+                                <tr>
+                                    <td class="border-gray-200 px-4 py-3">{{ $contact->id }}</td>
+                                    <td class="border-gray-200 px-4 py-3">{{ $contact->name }}</td>
+                                    <td class="border-gray-200 px-4 py-3">{{ $contact->title }}</td>
+                                    <td class="border-gray-200 px-4 py-3 text-lg text-gray-900">{{ $contact->created_at }}</td>
+                                    <td class="border-gray-200 px-4 py-3 text-lg text-gray-900"><a class="text-blue-500" href="{{ route('show', ['id' => $contact->id]) }}">詳細をみる</a></td>
+                                </tr>
                             @endforeach
                             </tbody>
                         </table>
