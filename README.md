@@ -3,6 +3,7 @@
 その後、追加機能を実装する。
 - 認証機能（breezeを使用）
 - ContactFormのCRUD機能
+- Fakerを用いたダミーデータの生成
 - modelの情報をCSV入出力できる機能
 - Repository層とService層の分離
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ContactForm;
 use App\Services\CheckFormService;
 use App\Http\Requests\StoreContactRequest;
+use App\Http\Requests\UpdateContactRequest;
 
 class ContactFormController extends Controller
 {
@@ -16,7 +17,7 @@ class ContactFormController extends Controller
      */
     public function index()
     {
-        $contacts = ContactForm::select('id', 'name', 'title', 'created_at')->get();
+        $contacts = ContactForm::select('id', 'name', 'title', 'created_at')->paginate(20);
         return view('contacts.index', compact('contacts'));
     }
 
@@ -86,7 +87,7 @@ class ContactFormController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateContactRequest $request, $id)
     {
         $contact = ContactForm::find($id);
         $contact->name = $request->name;
