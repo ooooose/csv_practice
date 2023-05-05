@@ -4,9 +4,9 @@
 - [x] ContactFormのCRUD機能
 - [x] Fakerを用いたダミーデータの生成
 - [x] modelの情報をCSV入出力できる機能
-- [] flashメッセージの追加
-- [] policyの追加
-- [] Repository層とService層の分離
+- [ ] flashメッセージの追加
+- [ ] policyの追加
+- [ ] Repository層とService層の分離
 
 ## 使用技術
 - PHP8
