@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\CsvDownloadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,10 @@ Route::prefix('contacts')
         Route::post('/{id}/destroy', 'destroy')->name('destroy');
 });
 
+Route::get('/csvDownload', [CsvDownloadController::class, 'downloadCsv'])->name('csvDownload');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');
 });
 
 Route::get('/dashboard', function () {
