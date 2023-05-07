@@ -18,6 +18,18 @@
                 </div>
             </div>
 
+            <div class="mx-auto">
+                @if (session('message'))
+                    <div class="my-2 mt-2">
+                        <div class="bg-blue-100 border text-sm border-blue-400 text-blue-700 px-4 py-3 rounded" role="alert">
+                            <div class="alert alert-success">
+                                <span class="block sm:inline">{{ session('message') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            </div>
+
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">

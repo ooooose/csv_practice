@@ -17,7 +17,7 @@ class ContactFormController extends Controller
      */
     public function index()
     {
-        $contacts = ContactForm::select('id', 'name', 'title', 'created_at')->paginate(20);
+        $contacts = ContactForm::select('id', 'name', 'title', 'created_at')->paginate(10);
         return view('contacts.index', compact('contacts'));
     }
 
@@ -49,6 +49,7 @@ class ContactFormController extends Controller
             'contact' => $request->contact, 
         ]);
 
+        $request->session()->flash('message', '投稿を作成しました');
         return to_route('index');
     }
 
@@ -98,7 +99,8 @@ class ContactFormController extends Controller
         $contact->age = $request->age;
         $contact->contact = $request->contact;
         $contact->save();
-            
+
+        $request->session()->flash('message', '投稿を更新しました');
         return to_route('index');
     }
 
@@ -113,7 +115,7 @@ class ContactFormController extends Controller
         $contact = ContactForm::find($id);
         $contact->delete();
         
-        return to_route('index');
+        return to_route('index')->with('message', '削除に成功しました');
     }
 
 }
