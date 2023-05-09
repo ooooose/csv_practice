@@ -4,8 +4,7 @@
 - [x] ContactFormのCRUD機能
 - [x] Fakerを用いたダミーデータの生成 5/5完了
 - [x] modelの情報をCSV入出力できる機能 5/6完了
-- [ ] flashメッセージの追加
-- [ ] policyの追加
+- [x] flashメッセージの追加
 - [ ] Repository層とService層の分離
 
 ## 使用技術
@@ -19,6 +18,5 @@
 ```
 CRUD機能：4/29 - 5/3
 CSV入出力機能： 5/4 - 5/6
-policy作成： 5/7 - 5/8
 リファクタ: 5/9 - 5/11
 ```
