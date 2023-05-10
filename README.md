@@ -5,7 +5,7 @@
 - [x] Fakerを用いたダミーデータの生成 5/5完了
 - [x] modelの情報をCSV入出力できる機能 5/6完了
 - [x] flashメッセージの追加
-- [ ] Repository層とService層の分離
+- [ ] Repository層とService層の分離(失敗、思った以上に難しい)
 
 ## 使用技術
 - PHP8
